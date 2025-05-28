@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Free DJ Gear Guide</title>
+  <title>Free Drops from Jacob Flint</title>
   <style>
     body {
       margin: 0;
@@ -70,12 +70,12 @@
 <body>
 
   <div class="container">
-    <img src="https://djguide.iamjacobflint.com/assets/avatar.jpg" alt="Avatar" class="avatar" />
+    <img src="https://drops.iamjacobflint.com/assets/avatar.jpg" alt="Avatar" class="avatar" />
 
-    <h2>Get the Free DJ Gear Guide 🎧</h2>
-    <p>Enter your email and I’ll send you the full breakdown</p>
+    <h2>Free Drops from Jacob Flint🎧</h2>
+    <p>Enter your email and you'll get access to guides, ableton templates, exculsive edits etc</p>
 
-  <form id="djguide-form">
+  <form id="drops-form">
   <input 
     type="email" 
     name="email" 
@@ -83,16 +83,16 @@
     required
     pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
   />
-  <button type="submit">Send Me the Guide</button>
+  <button type="submit">Get access to all stuff for free</button>
 </form>
 <script>
-document.getElementById("djguide-form").addEventListener("submit", function (e) {
+document.getElementById("drops-form").addEventListener("submit", function (e) {
   e.preventDefault();
 
   const form = e.target;
   const formData = new FormData(form);
 
-  fetch("https://formspree.io/f/xzzrlwae", {
+  fetch("https://formspree.io/f/mgvkgkkl", {
     method: "POST",
     body: formData,
     headers: {
@@ -101,7 +101,7 @@ document.getElementById("djguide-form").addEventListener("submit", function (e) 
   })
   .then(response => {
     if (response.ok) {
-      window.location.href = "https://djguide.iamjacobflint.com/thanks.html";
+      window.location.href = "https://drops.iamjacobflint.com/thanks.html";
     } else {
       alert("Oops! There was a problem. Please try again.");
     }
