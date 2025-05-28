@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free DJ Gear Guide</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #0f0f0f;
+      color: white;
+    }
+
+    .container {
+      text-align: center;
+      background: #1a1a1a;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 30px rgba(0,0,0,0.6);
+      max-width: 400px;
+      width: 90%;
+    }
+
+    img.avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 2px solid white;
+    }
+
+    input[type="email"] {
+      padding: 0.75rem;
+      border: none;
+      border-radius: 0.5rem;
+      width: 100%;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      background: #00ff99;
+      color: black;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    button:hover {
+      background: #00cc7a;
+    }
+
+    .disclaimer {
+      font-size: 0.75rem;
+      margin-top: 1rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="https://djguide.iamjacobflint.com/assets/avatar.jpg" alt="Avatar" class="avatar" />
+
+    <h2>Get the Free DJ Gear Guide 🎧</h2>
+    <p>Enter your email and I’ll send you the full breakdown</p>
+
+  <form id="djguide-form">
+  <input 
+    type="email" 
+    name="email" 
+    placeholder="you@email.com" 
+    required
+    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+  />
+  <button type="submit">Send Me the Guide</button>
+</form>
+<script>
+document.getElementById("djguide-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const formData = new FormData(form);
+
+  fetch("https://formspree.io/f/xzzrlwae", {
+    method: "POST",
+    body: formData,
+    headers: {
+      Accept: "application/json"
+    }
+  })
+  .then(response => {
+    if (response.ok) {
+      window.location.href = "https://djguide.iamjacobflint.com/thanks.html";
+    } else {
+      alert("Oops! There was a problem. Please try again.");
+    }
+  })
+  .catch(error => {
+    alert("Something went wrong. Please try again.");
+  });
+});
+</script>
+
+    <div class="disclaimer">
+      I’ll never spam or share your info. Unsubscribe anytime.
+    </div>
+  </div>
+
+  
+</body>
+</html>
