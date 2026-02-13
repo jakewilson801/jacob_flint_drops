@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Free Drops from Jacob Flint</title>
+  <title>Free Stuff from Jacob Flint</title>
   <style>
     body {
       margin: 0;
@@ -66,61 +66,21 @@
       color: #aaa;
     }
   </style>
+  <!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2090313');
+</script>
+<!-- End MailerLite Universal -->
 </head>
 <body>
 
   <div class="container">
-    <img src="https://drops.iamjacobflint.com/assets/avatar.jpg" alt="Avatar" class="avatar" />
+    <div class="ml-embedded" data-form="vK6oAf"></div>
 
-    <h2>Free Drops from Jacob Flint 🎧</h2>
-    <p>Enter your email and you'll get access to:</p>
-    <ul>
-      <li>Guestlist access at my shows</li>
-      <li>PDF Guides for DJing and Music Production</li>
-      <li>Ableton Templates</li>
-      <li>Exclusive Songs</li>
-    </ul>
-
-  <form id="drops-form">
-  <input 
-    type="email" 
-    name="email" 
-    placeholder="you@email.com" 
-    required
-    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-  />
-  <button type="submit">Get access to all stuff for free</button>
-</form>
-<script>
-document.getElementById("drops-form").addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  const form = e.target;
-  const formData = new FormData(form);
-
-  fetch("https://formspree.io/f/mgvkgkkl", {
-    method: "POST",
-    body: formData,
-    headers: {
-      Accept: "application/json"
-    }
-  })
-  .then(response => {
-    if (response.ok) {
-      window.location.href = "https://drops.iamjacobflint.com/thanks.html";
-    } else {
-      alert("Oops! There was a problem. Please try again.");
-    }
-  })
-  .catch(error => {
-    alert("Something went wrong. Please try again.");
-  });
-});
-</script>
-
-    <div class="disclaimer">
-      I’ll never spam or share your info. Unsubscribe anytime.
-    </div>
   </div>
 
   
